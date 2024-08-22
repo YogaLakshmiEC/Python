@@ -1,0 +1,18 @@
+def swap(lst,a,b):
+    lst[a],lst[b]=lst[b],lst[a]
+    return lst
+    
+lst=[]
+size=int(input("size of list:"))
+for i in range(0,size):
+    ele=int(input())
+    lst.append(ele)
+
+print("Before Swapping",lst)
+print("Enter the positions to Swap")
+a=int(input("Position 1:"))
+b=int(input("Position 2:"))
+if a < 0 or a > size or b<0 or b > size:
+    print("Invalid")
+else:
+    print("After Swapping",swap(lst,a,b))
